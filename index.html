@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arch.Studio — Designing Timeless Architecture</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════
+       NAVBAR
+       ════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">ARCH<span>.</span>STUDIO</a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-cta">Consultation</button>
+
+    <!-- Hamburger (mobile) -->
+    <div class="hamburger" id="hamburger" onclick="openMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay menu -->
+  <div class="nav-mobile" id="navMobile">
+    <button class="nav-mobile-close" onclick="closeMenu()">✕</button>
+    <a href="#about"        onclick="closeMenu()">About</a>
+    <a href="#services"     onclick="closeMenu()">Services</a>
+    <a href="#portfolio"    onclick="closeMenu()">Projects</a>
+    <a href="#testimonials" onclick="closeMenu()">Clients</a>
+    <a href="#contact"      onclick="closeMenu()">Contact</a>
+  </div>
+
+
+  <!-- ════════════════════════════════
+       HERO
+       ════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-radial"></div>
+
+    <!-- Decorative frame (desktop only) -->
+    <div class="hero-frame">
+      <div class="hero-frame-inner">
+        <svg viewBox="0 0 200 300" width="120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="180" width="160" height="100" fill="#C8A97E" opacity="0.18"/>
+          <rect x="45" y="110" width="110" height="70"  fill="#C8A97E" opacity="0.22"/>
+          <path d="M100 20 L180 110 L20 110 Z"          fill="#C8A97E" opacity="0.15"/>
+          <rect x="75" y="220" width="50"  height="60"  fill="#ffffff" opacity="0.08"/>
+          <rect x="30" y="200" width="30"  height="30"  fill="#ffffff" opacity="0.06"/>
+          <rect x="140" y="200" width="30" height="30"  fill="#ffffff" opacity="0.06"/>
+          <line x1="100" y1="20"  x2="100" y2="280" stroke="#C8A97E" stroke-width="0.5" opacity="0.35"/>
+          <line x1="20"  y1="280" x2="180" y2="280" stroke="#C8A97E" stroke-width="0.5" opacity="0.35"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Est. 2009 — Jakarta &amp; Beyond</div>
+
+      <h1>Designing <em>Timeless</em><br>Architecture</h1>
+
+      <p class="hero-sub">
+        We craft spaces that endure — blending human-centered design
+        with the quiet precision of form, material, and light.
+      </p>
+
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+          Explore Projects
+        </button>
+        <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Free Consultation
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       ABOUT
+       ════════════════════════════════ -->
+  <section class="about" id="about">
+
+    <!-- Left: illustration + badge -->
+    <div class="about-visual reveal">
+      <div class="about-img-wrap">
+        <svg viewBox="0 0 320 430" width="70%" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.55">
+          <rect x="30" y="240" width="260" height="160" fill="#C8A97E" opacity="0.30"/>
+          <rect x="65" y="150" width="190" height="90"  fill="#C8A97E" opacity="0.45"/>
+          <path d="M160 30 L290 150 L30 150 Z"          fill="#C8A97E" opacity="0.35"/>
+          <rect x="120" y="300" width="80"  height="100" fill="#1A1A1A" opacity="0.30"/>
+          <rect x="50"  y="268" width="50"  height="50"  fill="#1A1A1A" opacity="0.20"/>
+          <rect x="220" y="268" width="50"  height="50"  fill="#1A1A1A" opacity="0.20"/>
+          <line x1="160" y1="30"  x2="160" y2="400" stroke="#C8A97E" stroke-width="0.5" opacity="0.4"/>
+          <line x1="30"  y1="400" x2="290" y2="400" stroke="#C8A97E" stroke-width="0.5" opacity="0.4"/>
+          <line x1="30"  y1="150" x2="30"  y2="400" stroke="#C8A97E" stroke-width="0.5" opacity="0.2"/>
+          <line x1="290" y1="150" x2="290" y2="400" stroke="#C8A97E" stroke-width="0.5" opacity="0.2"/>
+          <circle cx="160" cy="90" r="40" stroke="#C8A97E" stroke-width="0.5" fill="none" opacity="0.25"/>
+        </svg>
+      </div>
+      <div class="about-badge">
+        <strong>15+</strong>
+        <span>Years of Excellence</span>
+      </div>
+    </div>
+
+    <!-- Right: text content -->
+    <div class="about-text">
+      <div class="section-label reveal">About the Studio</div>
+
+      <h2 class="reveal reveal-delay-1">Architecture as a Form of Living Art</h2>
+
+      <p class="reveal reveal-delay-2">
+        We are a multidisciplinary architecture studio rooted in the belief that great spaces
+        shape lives. From private residences to urban landmarks, our work is guided by a deep
+        respect for context, culture, and the people who inhabit each space.
+      </p>
+      <p class="reveal reveal-delay-2">
+        Every project begins with listening — understanding how our clients move, dream, and live.
+        We believe architecture is not just built, it is felt.
+      </p>
+
+      <div class="about-pillars">
+        <div class="pillar reveal reveal-delay-2">
+          <div class="pillar-icon">◈</div>
+          <div class="pillar-text">
+            <h4>Human-Centered Design</h4>
+            <p>Every space is designed around the people who inhabit it — their rhythms, needs, and aspirations.</p>
+          </div>
+        </div>
+        <div class="pillar reveal reveal-delay-3">
+          <div class="pillar-icon">◉</div>
+          <div class="pillar-text">
+            <h4>Sustainable Approach</h4>
+            <p>We integrate biophilic principles and low-impact materials to create buildings that coexist with nature.</p>
+          </div>
+        </div>
+        <div class="pillar reveal reveal-delay-4">
+          <div class="pillar-icon">◬</div>
+          <div class="pillar-text">
+            <h4>Attention to Detail</h4>
+            <p>Precision in every joint, surface, and proportion — beauty emerges from the discipline of craft.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════
+       SERVICES
+       ════════════════════════════════ -->
+  <section class="services" id="services">
+
+    <div class="services-header">
+      <div class="section-label center reveal">What We Do</div>
+      <h2 class="reveal reveal-delay-1">Our Services</h2>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-tag">Residential</div>
+        <h3>Residential Design</h3>
+        <p>Custom homes crafted to reflect your lifestyle — from intimate villas to sprawling family estates, each with a distinct spatial identity.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <div class="service-tag">Interior</div>
+        <h3>Interior Design</h3>
+        <p>Curated interiors that balance beauty and function. We design complete living environments, from layout to the last material selection.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <div class="service-tag">Renovation</div>
+        <h3>Renovation</h3>
+        <p>Transforming existing structures with sensitivity and vision — preserving character while elevating performance and aesthetics.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-num">04</div>
+        <div class="service-tag">Consultation</div>
+        <h3>Design Consultation</h3>
+        <p>Expert guidance at any stage of your project. We help you navigate design decisions, site potential, and spatial possibilities.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       PORTFOLIO
+       ════════════════════════════════ -->
+  <section class="portfolio" id="portfolio">
+
+    <div class="portfolio-header">
+      <div>
+        <div class="section-label reveal">Selected Work</div>
+        <h2 class="reveal reveal-delay-1">Portfolio</h2>
+      </div>
+      <a href="#" class="portfolio-link reveal">View All Projects →</a>
+    </div>
+
+    <div class="portfolio-grid reveal">
+
+      <!-- Featured / main project -->
+      <div class="proj proj-main">
+        <svg class="proj-canvas" viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg"
+             style="background:linear-gradient(145deg,#3d2b1a,#5a3e26,#4a3318)">
+          <rect x="60"  y="280" width="480" height="230" fill="#C8A97E" opacity="0.12"/>
+          <rect x="110" y="190" width="380" height="90"  fill="#C8A97E" opacity="0.10"/>
+          <path d="M300 60 L520 190 L80 190 Z"           fill="#C8A97E" opacity="0.10"/>
+          <rect x="220" y="380" width="160" height="130" fill="#ffffff" opacity="0.05"/>
+          <rect x="90"  y="320" width="90"  height="80"  fill="#ffffff" opacity="0.04"/>
+          <rect x="420" y="320" width="90"  height="80"  fill="#ffffff" opacity="0.04"/>
+          <line x1="60"  y1="510" x2="540" y2="510" stroke="#C8A97E" stroke-width="0.5" opacity="0.25"/>
+          <line x1="60"  y1="280" x2="540" y2="280" stroke="#C8A97E" stroke-width="0.3" opacity="0.15"/>
+          <circle cx="300" cy="125" r="60" stroke="#C8A97E" stroke-width="0.5" fill="none" opacity="0.15"/>
+          <rect x="280" y="310" width="0.5" height="200" fill="#C8A97E" opacity="0.20"/>
+          <rect x="320" y="310" width="0.5" height="200" fill="#C8A97E" opacity="0.20"/>
+          <ellipse cx="80"  cy="450" rx="18" ry="30" fill="#2E7D32" opacity="0.20"/>
+          <ellipse cx="520" cy="450" rx="18" ry="30" fill="#2E7D32" opacity="0.20"/>
+          <ellipse cx="40"  cy="440" rx="12" ry="22" fill="#2E7D32" opacity="0.15"/>
+        </svg>
+        <div class="proj-overlay">
+          <div class="proj-tag">Project 01 — 2024 · Residential</div>
+          <div class="proj-title">Villa Arimata — Bali Private Residence</div>
+          <div class="proj-meta">Tropical modernism · 680 m² · Seminyak, Bali</div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="proj">
+        <svg class="proj-canvas" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg"
+             style="background:linear-gradient(145deg,#1a2233,#2d3d55,#1e2d44)">
+          <rect x="40" y="50" width="320" height="190" fill="#378ADD" opacity="0.07"/>
+          <line x1="40" y1="100" x2="360" y2="100" stroke="#378ADD" stroke-width="0.5" opacity="0.2"/>
+          <line x1="40" y1="150" x2="360" y2="150" stroke="#378ADD" stroke-width="0.5" opacity="0.2"/>
+          <line x1="40" y1="200" x2="360" y2="200" stroke="#378ADD" stroke-width="0.5" opacity="0.2"/>
+          <rect x="120" y="50" width="0.5" height="190" fill="#ffffff" opacity="0.07"/>
+          <rect x="200" y="50" width="0.5" height="190" fill="#ffffff" opacity="0.07"/>
+          <rect x="280" y="50" width="0.5" height="190" fill="#ffffff" opacity="0.07"/>
+          <rect x="60"  y="70"  width="60" height="80" fill="#378ADD" opacity="0.06"/>
+          <rect x="140" y="60"  width="60" height="90" fill="#378ADD" opacity="0.08"/>
+          <rect x="220" y="75"  width="60" height="75" fill="#378ADD" opacity="0.05"/>
+          <rect x="300" y="65"  width="40" height="85" fill="#378ADD" opacity="0.07"/>
+        </svg>
+        <div class="proj-overlay">
+          <div class="proj-tag">Project 02 — 2023 · Commercial</div>
+          <div class="proj-title">Skyline Office — Jakarta CBD</div>
+          <div class="proj-meta">Commercial · 4,200 m²</div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="proj">
+        <svg class="proj-canvas" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg"
+             style="background:linear-gradient(145deg,#242220,#3d3530,#2a2420)">
+          <rect x="60" y="100" width="280" height="150" fill="#C8A97E" opacity="0.10"/>
+          <path d="M200 35 L340 100 L60 100 Z"          fill="#C8A97E" opacity="0.10"/>
+          <rect x="145" y="200" width="110" height="50"  fill="#ffffff" opacity="0.05"/>
+          <rect x="70"  y="130" width="70"  height="55"  fill="#ffffff" opacity="0.04"/>
+          <rect x="260" y="130" width="70"  height="55"  fill="#ffffff" opacity="0.04"/>
+          <line x1="60" y1="250" x2="340" y2="250" stroke="#C8A97E" stroke-width="0.5" opacity="0.25"/>
+          <ellipse cx="60"  cy="225" rx="15" ry="25" fill="#2E7D32" opacity="0.18"/>
+          <ellipse cx="340" cy="225" rx="15" ry="25" fill="#2E7D32" opacity="0.18"/>
+        </svg>
+        <div class="proj-overlay">
+          <div class="proj-tag">Project 03 — 2023 · Residential</div>
+          <div class="proj-title">Casa Tenang — Surabaya</div>
+          <div class="proj-meta">Residential · 320 m² · East Java</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       STATS
+       ════════════════════════════════ -->
+  <div class="stats" id="stats">
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="128" data-suffix="+">0<sup>+</sup></div>
+      <div class="stat-label">Projects Completed</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-num" data-target="15" data-suffix="+">0<sup>+</sup></div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-num" data-target="98" data-suffix="%">0<sup>%</sup></div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-num" data-target="12" data-suffix="+">0<sup>+</sup></div>
+      <div class="stat-label">Design Awards</div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════
+       TESTIMONIALS
+       ════════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+
+    <div class="testimonials-header">
+      <div class="section-label center reveal">What Clients Say</div>
+      <h2 class="reveal reveal-delay-1">Testimonials</h2>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card reveal">
+        <span class="testi-big-quote">"</span>
+        <p class="testi-text">
+          Working with Arch.Studio completely transformed how we think about space.
+          The villa they designed for us feels like it grew naturally from the land itself
+          — calm, warm, and effortlessly beautiful.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">RA</div>
+          <div>
+            <div class="testi-name">Rizky Andrian</div>
+            <div class="testi-role">Private Client — Bali</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal reveal-delay-1">
+        <span class="testi-big-quote">"</span>
+        <p class="testi-text">
+          From concept to delivery, the team showed a rare combination of creative ambition
+          and practical discipline. The office they designed has genuinely elevated our company culture.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">SL</div>
+          <div>
+            <div class="testi-name">Sari Lestari</div>
+            <div class="testi-role">CEO, Nusantara Group — Jakarta</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal reveal-delay-2">
+        <span class="testi-big-quote">"</span>
+        <p class="testi-text">
+          They listened deeply before drawing a single line. The renovation of our heritage home
+          preserved everything meaningful while making it completely livable for a modern family.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">BW</div>
+          <div>
+            <div class="testi-name">Budi Widjaya</div>
+            <div class="testi-role">Homeowner — Surabaya</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       CALL TO ACTION
+       ════════════════════════════════ -->
+  <section class="cta-section">
+    <div class="cta-grid"></div>
+    <div class="cta-ring"></div>
+    <div class="cta-ring"></div>
+    <div class="cta-ring"></div>
+    <div class="cta-inner">
+      <div class="section-label center reveal">Take the First Step</div>
+      <h2 class="reveal reveal-delay-1">Ready to Build Your<br>Dream Space?</h2>
+      <p class="reveal reveal-delay-2">Let's begin with a conversation. No obligation — just clarity and vision.</p>
+      <button
+        class="btn-primary reveal reveal-delay-3"
+        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+      >
+        Start Consultation
+      </button>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       CONTACT
+       ════════════════════════════════ -->
+  <section class="contact" id="contact">
+
+    <!-- Left: info -->
+    <div class="contact-info">
+      <div class="section-label reveal">Get in Touch</div>
+      <h2 class="reveal reveal-delay-1">Let's Start a<br>Conversation</h2>
+      <p class="reveal reveal-delay-2">
+        Every great project starts with a single conversation. Reach out to discuss your
+        vision — we'll help you see what's possible.
+      </p>
+      <div class="contact-details">
+        <div class="contact-item reveal reveal-delay-2">
+          <span class="contact-item-label">Office</span>
+          <span class="contact-item-val">Jl. Diponegoro No. 44<br>Surabaya, East Java 60271</span>
+        </div>
+        <div class="contact-item reveal reveal-delay-3">
+          <span class="contact-item-label">Phone</span>
+          <span class="contact-item-val">+62 31 555 0192</span>
+        </div>
+        <div class="contact-item reveal reveal-delay-3">
+          <span class="contact-item-label">Email</span>
+          <span class="contact-item-val">hello@archstudio.co.id</span>
+        </div>
+        <div class="contact-item reveal reveal-delay-4">
+          <span class="contact-item-label">Hours</span>
+          <span class="contact-item-val">Mon – Fri, 9:00 – 18:00 WIB</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="reveal reveal-delay-1">
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Project Type</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service...</option>
+            <option value="residential">Residential Design</option>
+            <option value="interior">Interior Design</option>
+            <option value="renovation">Renovation</option>
+            <option value="consultation">Design Consultation</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your vision, site, and timeline..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send Message</button>
+
+      </form>
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════
+       FOOTER
+       ════════════════════════════════ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="footer-brand-logo">ARCH<span>.</span>STUDIO</a>
+        <p>We design spaces that endure — human-centered, sustainably built, and deeply considered. Based in Surabaya, working everywhere.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Residential</a></li>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Renovation</a></li>
+          <li><a href="#">Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Arch.Studio. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" class="social-btn">IG</a>
+        <a href="#" class="social-btn">LI</a>
+        <a href="#" class="social-btn">BE</a>
+        <a href="#" class="social-btn">PT</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript (loaded last for performance) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
